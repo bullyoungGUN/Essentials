@@ -9,7 +9,7 @@
 # Local group inheritances define your promotion tree when using 'manpromote/mandemote'
 
 groups:
-  Default:
+  Guest:
     default: true
     permissions:
     - -bukkit.command.kill
@@ -19,10 +19,10 @@ groups:
     - g:essentials_default
     - g:towny_default
     info:
-      prefix: '&e'
-      build: false
+      prefix: '&f'
+      build: true
       suffix: ''
-  Builder:
+  Mod:
     default: false
     permissions: []
     inheritance:
@@ -30,21 +30,21 @@ groups:
     - g:essentials_builder
     - g:towny_builder
     info:
-      prefix: '&2'
+      prefix: '&5[Mod]'
       build: true
       suffix: ''
-  Moderator:
+  VIP:
     default: false
     permissions: []
     inheritance:
-    - builder
+    - Mod
     - g:groupmanager_moderator
     - g:bukkit_moderator
     - g:essentials_moderator
     - g:towny_moderator
     - g:vanish_moderator
     info:
-      prefix: '&5'
+      prefix: '&2[VIP]'
       build: true
       suffix: ''
   Admin:
@@ -58,7 +58,7 @@ groups:
     - g:towny_admin
     - g:vanish_admin
     info:
-      prefix: '&c'
+      prefix: '&1[ADMIN]'
       build: true
       suffix: ''
   Owner:
@@ -69,6 +69,6 @@ groups:
     inheritance:
     - admin
     info:
-      prefix: '&4'
+      prefix: '&0'
       build: true
       suffix: ''
